@@ -18,10 +18,12 @@ class DPS:
     
     def read_data(self):
         data_dir = os.path.join(root, "data")
+        print(data_dir)
         files = os.listdir(data_dir)
 
         pattern = f"DPS{self.number}"
         for file in files:
+            print(file)
             if re.search(pattern, file):
                 break
         else:

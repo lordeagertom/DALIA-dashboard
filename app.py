@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 from dalia_dashboard.map import add_map_column
 from dalia_dashboard.plot import add_graph_column
@@ -19,4 +21,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print(os.getcwd())
     main()
