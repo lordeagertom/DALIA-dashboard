@@ -3,10 +3,6 @@ import os
 import re
 from functools import reduce
 
-from dalia_dashboard.utils import get_project_root
-
-root = get_project_root()
-
 class DPS:
     def __init__(self, poi_lon, poi_lat, poi_elev, number, name):
         self.lon = poi_lon
@@ -17,7 +13,7 @@ class DPS:
         self.data = self.read_data()
     
     def read_data(self):
-        data_dir = os.path.join(root, "data")
+        data_dir = "data"
         print(data_dir)
         files = os.listdir(data_dir)
 
