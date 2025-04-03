@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 import streamlit as st
-from dps import common_indexes
+from dalia_dashboard.dps import common_indexes
 
 
 def title_text(dps):

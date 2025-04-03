@@ -1,7 +1,7 @@
 import folium
 import streamlit as st
 from streamlit_folium import st_folium
-from dps import dps_instances
+from dalia_dashboard.dps import dps_instances
 
 
 def add_marker_to_map(poi, folium_map):

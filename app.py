@@ -1,6 +1,6 @@
 import streamlit as st
-from map import add_map_column
-from plot import add_graph_column
+from dalia_dashboard.map import add_map_column
+from dalia_dashboard.plot import add_graph_column
 
 st.set_page_config(layout="wide")
 
