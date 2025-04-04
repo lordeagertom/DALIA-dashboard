@@ -94,11 +94,11 @@ def add_graph_column():
         selected_dps = st.session_state["selected_dps"]
         data = selected_dps.data.loc[common_indexes]
         if selected_graph == "Bias":
-            fig = plot_diff(data, "Validation")
+            fig = plot_diff(data, title_text(selected_dps))
         elif selected_graph == "Skill":
-            fig = plot_skill(data, "Validation")
+            fig = plot_skill(data, title_text(selected_dps))
         elif selected_graph == "NaNs":
-            fig = plot_nan(data, "Validation")
+            fig = plot_nan(data, title_text(selected_dps))
         st.plotly_chart(fig, use_container_width=True)  # Display the selected graph
     else:
         st.write("Click a PoI to see validation.")
