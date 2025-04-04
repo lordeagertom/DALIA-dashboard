@@ -12,7 +12,7 @@ if "selected_dps" not in st.session_state:
 def main():
     st.title("DPS Validation Dashboard")
     st.write("Selected results from meteoblue's validation API corresponding to "
-             "DALIA Pilot Sites")
+             "DALIA Pilot Sites for the year 2024")
 
     with st.sidebar:
         add_sidebar()
