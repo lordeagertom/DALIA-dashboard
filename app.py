@@ -1,8 +1,7 @@
-import os
-
 import streamlit as st
 from dalia_dashboard.map import add_map_column
 from dalia_dashboard.plot import add_graph_column
+from dalia_dashboard.sidebar import add_sidebar
 
 st.set_page_config(layout="wide")
 
@@ -11,7 +10,14 @@ if "selected_dps" not in st.session_state:
 
 
 def main():
-    col1, col2 = st.columns([2, 1])
+    st.title("DPS Validation Dashboard")
+    st.write("Selected results from meteoblue's validation API corresponding to "
+             "DALIA Pilot Sites")
+
+    with st.sidebar:
+        add_sidebar()
+
+    col1, col2 = st.columns([1, 1])  # Adjust column ratio back to equal
 
     with col1:
         add_map_column()
