@@ -46,7 +46,7 @@ def plot_diff(data, title):
     fig.add_trace(go.Bar(x=data['Difference in Totals ()'], y=data.index, name="Difference in Totals", orientation="h"))
     fig.update_layout(
         title={"text": title, "x": 0.5, "xanchor": "center"},
-        xaxis={"automargin": True},  # Dynamically adjust
+        xaxis={"automargin": True, "range": [-1700, 600]},  # Set initial x-axis limits
         yaxis={"automargin": True},  # Prevent truncation
         margin=dict(l=150, r=50, t=50, b=50)  # Manual adjustment (if needed)
     )
@@ -58,7 +58,7 @@ def plot_skill(data, title):
     fig.add_trace(go.Bar(x=data['Heidke Skill Score at 0.1 '], y=data.index, name="Heidke Skill Score at 0.1", orientation="h"))
     fig.update_layout(
         title={"text": title, "x": 0.5, "xanchor": "center"},
-        xaxis={"automargin": True},  # Dynamically adjust
+        xaxis={"automargin": True, "range": [0, 0.5]},  # Dynamically adjust
         yaxis={"automargin": True},  # Prevent truncation
         margin=dict(l=150, r=50, t=50, b=50)  # Manual adjustment (if needed)
     )
@@ -94,6 +94,7 @@ def add_graph_column():
     if st.session_state["selected_dps"] is not None:
         selected_dps = st.session_state["selected_dps"]
         data = selected_dps.data.loc[common_indexes]
+        st.markdown(f"<h3 style='text-align: center;'>{title_text(selected_dps)}</h3>", unsafe_allow_html=True)
         if selected_graph == "Bias":
             fig = plot_diff(data, title_text(selected_dps))
         elif selected_graph == "Skill":
