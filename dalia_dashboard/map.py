@@ -13,10 +13,11 @@ def add_marker_to_map(poi, folium_map):
 
 
 def add_map_column():
-    m = folium.Map(location=[47.23137670455077, 19.312211215415363], zoom_start=5)
+    m = folium.Map(location=[47.54493180124391, 20.817977284080364], zoom_start=5)
     for dps in dps_instances:
         add_marker_to_map(dps, m)
-    map_data = st_folium(m, width=1000, height=600, returned_objects=["last_object_clicked"])
+
+    map_data = st_folium(m, returned_objects=["last_object_clicked"])
 
     if map_data["last_object_clicked"] is not None:
 
