@@ -88,7 +88,8 @@ def add_graph_column():
     selected_graph = st.radio(
         label="Select a graph to display:",
         options=["Bias", "Skill", "NaNs"],  # Options to toggle between
-        index=0  # Default to the first graph
+        index=0,  # Default to the first graph
+        horizontal=True  # Display options in a horizontal row
     )
     if st.session_state["selected_dps"] is not None:
         selected_dps = st.session_state["selected_dps"]
@@ -102,4 +103,3 @@ def add_graph_column():
         st.plotly_chart(fig, use_container_width=True)  # Display the selected graph
     else:
         st.write("Click a PoI to see validation.")
-
