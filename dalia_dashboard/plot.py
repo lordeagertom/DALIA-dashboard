@@ -46,7 +46,7 @@ def plot_diff(data, title):
     fig.add_trace(go.Bar(x=data['Difference in Totals ()'], y=data.index, name="Difference in Totals", orientation="h"))
     fig.update_layout(
         title={"text": title, "x": 0.5, "xanchor": "center"},
-        xaxis={"automargin": True, "title": "Total Forecast - Observation (mm)", "range": [-600, 600]},  # Set initial x-axis limits
+        xaxis={"automargin": True, "title": "Total Forecast - Observation (mm)", "range": [-250, 250]},  # Set initial x-axis limits
         yaxis={"automargin": True},  # Prevent truncation
         margin=dict(l=150, r=50, t=50, b=50)  # Manual adjustment (if needed)
     )

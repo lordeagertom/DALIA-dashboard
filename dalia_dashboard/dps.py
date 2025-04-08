@@ -34,15 +34,15 @@ def common_indexes(instances):
     return list(common)
 
 
-DPS1 = DPS(poi_lon=17.455, poi_lat=47.849, poi_elev=120, number=1, name="Hungary Sziegetköz")
+# DPS1 = DPS(poi_lon=17.455, poi_lat=47.849, poi_elev=120, number=1, name="Hungary Sziegetköz")
 DPS2 = DPS(poi_lon=11.286, poi_lat=48.746, poi_elev=389, number=2, name="Bergheim-Ingolstadt")
 DPS3 = DPS(poi_lon=16.604, poi_lat=49.183, poi_elev=237, number=3, name="Dyje-Thaya")
 DPS4 = DPS(poi_lon=18.731, poi_lat=49.218, poi_elev=378, number=4, name="Zilna")
 DPS5 = DPS(poi_lon=19.604, poi_lat=45.222, poi_elev=80, number=5, name="Begečka Jama")
-DPS6 = DPS(poi_lon=22.562, poi_lat=44.307, poi_elev=46, number=6, name="Iron Gates")
-DPS7 = DPS(poi_lon=29.284, poi_lat=45.288, poi_elev=0, number=7, name="Danube Delta")
+# DPS6 = DPS(poi_lon=22.562, poi_lat=44.307, poi_elev=46, number=6, name="Iron Gates")
+# DPS7 = DPS(poi_lon=29.284, poi_lat=45.288, poi_elev=0, number=7, name="Danube Delta")
 DPS8 = DPS(poi_lon=21.572, poi_lat=48.319, poi_elev=116, number=8, name="Bodrog River Basin")
-DPS9 = DPS(poi_lon=21.843, poi_lat=47.081, poi_elev=142, number=9, name="Crisuri Water Basin")
+# DPS9 = DPS(poi_lon=21.843, poi_lat=47.081, poi_elev=142, number=9, name="Crisuri Water Basin")
 
-dps_instances = [DPS1, DPS2, DPS3, DPS4, DPS5, DPS6, DPS7, DPS8, DPS9]
+dps_instances = [DPS2, DPS3, DPS4, DPS5, DPS8]
 common_indexes = common_indexes(dps_instances)
